@@ -14,8 +14,9 @@ int main(long argc,char *argv[])
 	  long len = strlen(buf);
 	  fwrite(buf ,1,len,fp);
 	  write(0,"c",1);
+	  write(0,"\n",1);
 	  printf("hello world\n");
-	  printf("%d  %s\n",len,buf);
+	  printf("len = %d, buff =  %s\n",len,buf);
 	}
 	
 	fclose(fp);
