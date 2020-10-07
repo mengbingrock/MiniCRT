@@ -50,15 +50,15 @@ void mini_crt_entry(void)
 		}
 		cl++;
 	}
-#else
+#else 
 	long argc;
 	char** argv;
 	char* ebp_reg	= 0;
 	//ebp_reg = %ebp
 	asm("movq %%rbp,%0 \n":"=r"(ebp_reg));
 
-	argc	= *(long*)(ebp_reg + 4);
-	argv	= (char**)(ebp_reg + 8);
+	argc	= *(long*)(ebp_reg + 8);
+	argv	= (char**)(ebp_reg + 16);
 
 #endif
 

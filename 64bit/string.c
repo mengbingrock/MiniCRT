@@ -44,6 +44,23 @@ char* itoa(long n,char* str,long radix)
 	return str;
 }
 
+// A simple atoi() function 
+long atoi(char* str) 
+{ 
+    // Initialize result 
+    long res = 0; 
+  
+    // Iterate through all characters 
+    // of input string and update result 
+    for (int i = 0; str[i]!= '\0'; ++i) {
+        res = res * 10 + str[i] - '0'; 
+    }
+  
+    // return result. 
+    return res; 
+}
+
+
 long strcmp(const char* src, const char* dst)
 {
 	long ret	= 0;
